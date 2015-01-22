@@ -1,10 +1,10 @@
 # Functions to build and compute the inverse of a matrix are makeCacheMatrix and cacheSolve. 
 
 # makeCacheMatrix creates a list with the following functions. 
-#  set -> set the value on  matrix
-#  get -> get the value on  matrix
-#  setinverse -> the value of inverse of the matrix
-#  getinverse -> gets the inverse value of matrix.
+#  set -> set the value on  matrix.
+#  get -> get the value on  matrix.
+#  setinverse -> set the inverse on the matrix.
+#  getinverse -> gets the inverse from the matrix.
 #  mymatrix = makeCacheMatrix(matrix(c(4,1,3,2), nrow=2, ncol=2)) will create a matrix of 2 Rows and 2 Columns 
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -25,22 +25,20 @@ makeCacheMatrix <- function(x = matrix()) {
 	# Gets the inverse of the matrix
 	getinverse <- function() { m }
 	
-	
 	list(set = set, get = get,
 		 setinverse = setinverse,
 		 getinverse = getinverse)
 
 }
 
-
 # Computes the inverse of matrix, if its already there returns from cache  
 # otherwise  compute the inverse and store the result in Cache. 
 
 cacheSolve <- function(x, ...) {
-	## Return a matrix that is the inverse of 'x'
+
 	inversevalue <- x$getinverse()
 	
-	# Try to get it from Cache if its available return 
+	#Check if the inverse value is in the Cache, if its available return 
 	if(!is.null(inversevalue)) {
 			message("getting inverse from Cache ")
 			return (inversevalue)
