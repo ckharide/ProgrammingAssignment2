@@ -1,4 +1,4 @@
-# Functions to cache the inverse of a matrix are makeCacheMatrix and cacheSolve. 
+# Functions to build and compute the inverse of a matrix are makeCacheMatrix and cacheSolve. 
 
 # makeCacheMatrix creates a list with the following functions. 
 #  set/gets the value on  matrix
